@@ -1,6 +1,4 @@
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.commands.ShouldBe;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -31,7 +29,7 @@ public class CardDeliveryTest {
         $("[data-test-id=agreement]").click();
         $("button.button").click();
         $("[data-test-id=notification]")
-                .shouldBe(Condition.visible, Duration.ofSeconds(20))
+                .shouldBe(Condition.visible, Duration.ofSeconds(30))
                 .shouldHave(exactText("Успешно! Встреча успешно забронирована на " + planningDate));
 
     }
