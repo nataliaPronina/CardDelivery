@@ -1,5 +1,6 @@
 import com.codeborne.selenide.Condition;
-import org.jetbrains.annotations.NotNull;
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.commands.ShouldBe;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -12,7 +13,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CardDeliveryTest {
-    private @NotNull String generateDate(int addDays, String pattern) {
+    private String generateDate(int addDays, String pattern) {
         return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
     }
 

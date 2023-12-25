@@ -19,5 +19,4 @@ jobs:
       - name: Start SUT
         run: java -jar ./artifacts/app-card-delivery.jar -port=7777 &
       - name: Build with Gradle
-        run: ./gradlew test --info
-
+        run: ./gradlew test -Selenide.headless=true --info
