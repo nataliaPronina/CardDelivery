@@ -35,5 +35,5 @@ public class CardDeliveryTest {
                 .shouldHave(exactText("Успешно! Встреча успешно забронирована на " + planningDate));
 
     }
-//
+
 }
